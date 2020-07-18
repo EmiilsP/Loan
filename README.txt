@@ -19,6 +19,8 @@ Potential improvements:
     *Better response handling in success/error cases
     *Additional endpoints (for example, createPerson)
 
+Guide lines:
+To run simply implement project (build gradle and build project) and press run. No extra steps. Need at least Java 11 version.
 
 Test data generated in homework\loan\src\main\resources\data.sql which can be used for endpoint testing.
 In homework\loan\src\main\resources\application.properties can configure limits for loan applications
