@@ -54,7 +54,7 @@ public class DefaultLoanService implements LoanService {
     @Override
     public List<Loan> getAll() {
         return StreamSupport.stream(loanRepository.findAll().spliterator(), false)
-                            .collect(Collectors.toList());
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -64,11 +64,11 @@ public class DefaultLoanService implements LoanService {
         if (optionalUser.isPresent()) {
             List<UserLoans> userLoans = userLoansRepository.findByUser(optionalUser.get());
             List<Long> ids = userLoans.stream()
-                                      .map(UserLoans::getId)
-                                      .collect(Collectors.toList());
+                    .map(UserLoans::getId)
+                    .collect(Collectors.toList());
             loanRepository.findAllById(ids)
-                          .iterator()
-                          .forEachRemaining(loans::add);
+                    .iterator()
+                    .forEachRemaining(loans::add);
         }
         return loans;
     }

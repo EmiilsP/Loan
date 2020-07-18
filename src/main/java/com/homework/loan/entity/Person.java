@@ -9,7 +9,7 @@ public class Person {
 
     @Id
     @Column
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(unique = true)
@@ -21,7 +21,8 @@ public class Person {
     @Column
     private String surname;
 
-    public Person() {}
+    public Person() {
+    }
 
     public Person(long id) {
         this.id = id;

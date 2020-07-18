@@ -12,7 +12,7 @@ public class BlackList {
     private long id;
 
     @ManyToOne
-    @JoinColumn(name="person_id", unique = true)
+    @JoinColumn(name = "person_id", unique = true)
     private Person person;
 
     public long getId() {

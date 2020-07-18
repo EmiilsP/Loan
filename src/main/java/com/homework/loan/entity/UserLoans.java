@@ -9,15 +9,15 @@ public class UserLoans {
 
     @Id
     @Column
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @ManyToOne
-    @JoinColumn(name="user_id")
+    @JoinColumn(name = "user_id")
     private User user;
 
     @ManyToOne
-    @JoinColumn(name="loan_id", unique = true)
+    @JoinColumn(name = "loan_id", unique = true)
     private Loan loan;
 
     public long getId() {

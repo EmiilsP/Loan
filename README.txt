@@ -21,6 +21,9 @@ Potential improvements:
 
 
 Test data generated in homework\loan\src\main\resources\data.sql which can be used for endpoint testing.
+In homework\loan\src\main\resources\application.properties can configure limits for loan applications
+    *apiFilter.sameCountry.requestPeriodInSeconds=3
+    *apiFilter.sameCountry.validRequestCount=2
 
 Endpoints:
 http://localhost:8080/listAll -list all approved loans
